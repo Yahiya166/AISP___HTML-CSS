@@ -1,0 +1,142 @@
+/* ------------------Typography------------------ */
+@font-face {
+  font-family: "gil";
+  src: url("../css/GIL_____.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+html {
+  font-size: 0.625vw;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $font-color;
+  font-size: 1.6rem;
+  background: $accent-color;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cormorant Garamond', serif;
+  line-height: 1.2;
+  margin: 1rem 0;
+}
+h1 {
+  font-size: 4.2rem;
+  font-weight: 300;
+  span {
+    font-weight: 700;
+  }
+}
+h2 {
+  font-size: 3.8rem;
+   font-weight: 300;
+  span {
+    font-weight: 700;
+  }
+}
+h3 {
+  font-size: 3.4rem;
+   font-weight: 300;
+  span {
+    font-weight: 700;
+  }
+}
+h4 {
+  font-size: 2.4rem;
+}
+h5 {
+  font-size: 2.1rem;
+}
+h6 {
+  font-size: 1.8rem;
+}
+p {
+  line-height: 1.4;
+  font-size: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  color: $font-color;
+  display: block;
+  @include ease-in();
+}
+img {
+  vertical-align: middle;
+}
+.relative {
+  position: relative;
+}
+.left_btn,
+.right_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: fit-content;
+    z-index: 9;
+    cursor: pointer;
+    i {
+        color: $primary-color;
+        font-size: 2rem;
+        @include ease-in(.3s);
+        &:hover i {
+            color: #fff;
+        }
+    }
+}
+
+.left_btn {
+    left: 2%;
+}
+
+.right_btn {
+    right: 2%;
+}
+.heading {
+  position: relative;
+  text-align: center;
+  margin-bottom: 4rem;
+
+  p {
+    margin: .5rem 0;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -.5rem;
+    left: 0;
+    right: 0;
+    width: 8rem;
+    height: .2rem;
+    background: $primary-color;
+    margin: 0 auto;
+  }
+}
+
+.social__icon {
+  gap: .3rem;
+  a{
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    @include ease-in();
+
+    i {
+      color: #fff;
+      @include ease-in();
+    }
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+}

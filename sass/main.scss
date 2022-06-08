@@ -1,0 +1,281 @@
+@import "./reset";
+@import "./variable";
+@import "./function";
+@import "./mixin";
+@import "./typography";
+@import "./layout";
+@import "./list";
+@import "./media";
+@import "./animation";
+@import "./btn";
+@import "./input";
+@import "./_accordian";
+@import "./tab";
+@import "./banner";
+@import "./header";
+@import "./footer";
+.about {
+    background: $accent-color;
+
+    &__main{
+        p {
+            text-align: justify;
+        }
+        .card {
+           
+            &__body {
+                a.btn {
+                    margin: 0 auto;
+                    justify-content: center;
+                }
+            }
+            &:hover {
+                .card__head {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+.section1 {
+    position: relative;
+    .block__inner {
+        h2 {
+            text-transform: uppercase;
+        }
+    .left {
+        width: 55%;
+        margin: 0 1rem;
+        max-height: 52rem;
+        overflow: hidden;
+      img {
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+    .right {
+        width: 32%;
+        // background: $accent-color;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 auto;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            right: 0;
+            width: 15rem;
+            background: url(../webImages/12.png) no-repeat;
+            background-size: cover;
+            height: 32rem;
+            z-index: -1;
+        }
+        p {
+            width: 80%;
+        }
+
+    }
+  }
+  &.section1_2{
+      .left{
+          order: 2;
+      }
+      .right {
+          margin: 0;
+          margin-left: auto;
+        &:before {
+            top: 5%;
+            left: 0;
+            width: 15rem;
+            background: url(../webImages/13.png) no-repeat;
+            background-size: cover;
+            height: 32rem;
+        }
+
+    }
+  }
+  &.section1_3{
+    .right {
+      &:before {
+          top: 5%;
+          right: 0;
+          width: 15rem;
+          background: url(../webImages/14.png) no-repeat;
+          background-size: cover;
+          height: 23rem;
+      }
+
+  }
+}
+  }
+  .client {
+      .heading {
+
+      }
+      &__main{
+          gap: 0;
+          .box {
+              position: relative;
+              overflow: hidden;
+              @include ease-in(1s);
+              &__img{
+                  overflow: hidden;
+                  img {
+                    width: 100%;
+                  }
+              }
+              &__body{
+                  position: absolute;
+                  inset: 0;
+                  background: #ccc;
+                  display: grid;
+                  place-items: center;
+                  transform: translateX(-100%);
+                  @include ease-in(1s);
+                  z-index: 1;
+                  .btn {
+                      padding: 1rem 4rem;
+                  }
+
+              }
+              &:hover .box__body {
+                transform: translateX(0%);
+              }
+          }
+      }
+  }
+  .section2 {
+      position: relative;
+      img {
+          width: 100%;
+          height: 30rem;
+          object-fit: cover;
+      }
+  }
+  .features {
+      &__main{
+          .card {
+              &__img {
+
+              }     
+          }
+      }
+  }
+  .faqs {
+      &__main{
+
+
+          .btn.btn-primary{
+            margin: 5rem auto;
+            width: fit-content;
+          }
+      }
+  }
+  .section3 {
+      &__main{
+          &--box{
+              .right {
+                img {
+                    width: 100%;
+                }
+              }
+              .left {
+                width: 75%;
+                background: $accent-color;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                padding: 0 5rem;
+                margin-left: auto;
+                h2 {
+                    font-size: 3.4rem;
+                }
+                .btn {
+                    font-size: 1.6rem;
+                    margin: 1rem 0;
+                }
+              }
+          }
+      }
+  }
+
+  .form1 {
+      background: $primary-color;
+      .block__inner {
+          background: $secondary-color;
+          padding: 2rem;
+          overflow: hidden;
+          .left {
+              position: relative;
+              padding-right: 2rem;
+              &::before {
+              content: '';
+              position: absolute;
+              right: 0;
+              top: -5rem;
+              width: 0.2rem;
+              height: 160%;
+              background: #fff;
+              }
+              p {
+                  text-align: justify;
+              }
+          }
+          .right {
+              form {
+                  margin-top: 3rem;
+                  .flex_ {
+                    gap: 2rem;
+                    margin-bottom: 2rem;
+                    .btn_main {
+                        width:60%;
+                        .btn-secondary {
+                            outline: none;
+                            border: none;
+                            margin: 0 auto;
+                            border-radius: 0;
+                            padding: 0.8rem 2rem;
+                            border: 1px solid #fff;
+                            // display: block;
+                            // margin-right: 0;                        
+                        }
+                    }
+                  }
+                  &.downloadebook {
+
+                    .input_ {
+                        width: 100%;
+                        margin: 1rem auto;
+                        input,select {
+                            width: 100%;
+                        }
+                    }
+                  }
+              }
+              .input_ {
+                  input {
+                      width: 100%;
+                  }
+              }
+          }
+      }
+      &.form2 {
+        background: transparent;
+        .block__inner {
+            background: transparent;  
+            .right {
+                background: #138775;
+                padding: 2rem;
+                border-radius: 2rem;
+                color: #fff;
+            }
+        }
+      }
+  }
+  @import "./innerPage";

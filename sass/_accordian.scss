@@ -1,0 +1,46 @@
+
+.accordian {
+    position: relative;
+
+.accordian__heading {
+    cursor: pointer;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    h3 {
+        font-size: 2.1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+
+    }
+    i {
+        font-size: 2rem;
+        color: $primary-color;
+        @include ease-in();
+    }
+
+&.active {
+    background: $primary-color;
+    h3 {
+        color: #fff;
+    }
+    i {
+        transform: rotate(90deg);
+        color: #fff;
+    }
+}
+}
+&__body {
+    padding: 0rem 1.8rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    border-bottom:.1rem solid $border-color;
+    p {
+        padding: 0rem 0;
+    }
+
+}
+}

@@ -1,0 +1,135 @@
+.footer {
+    position: relative;
+    &__top{
+        background: #fff;
+        padding: 1rem 0 0 0;
+        .block__inner:nth-child(1){
+            grid-template-columns: 1.8fr 1fr 1fr;
+        }
+        .block__inner:nth-child(2){
+            padding: 0rem 0;
+            .footerpolicy{
+                align-items: center;
+            li {
+                a {
+                    position: relative;
+                    color: #000;
+                    font-size: 1.1rem;
+                    @include ease-in();
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+                & + li a::before{
+                    content: " | ";
+                    margin: 0 0.4rem 0 0.8rem;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        .btn-group-main {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: 40%;
+            justify-content: space-between;
+        }
+        .btn-group {
+            display: flex;
+
+        .btn
+        {
+            border: 1px solid #fff;
+            font-size: 1.2rem;
+&:nth-child(1) {
+    border-radius: 3rem 0 0 3rem;
+}
+&:nth-child(2) {
+    border-radius: 0 3rem 3rem 0;
+    background: #03584b;
+}
+        }
+    }
+    .social__icon {
+        li {
+            a {
+                i {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+        } 
+        &--box{
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            &logo{
+                img {
+                    width: 10rem;
+                }
+            }
+            .map2 {
+                width: 45.4rem;
+            }
+            .map {
+                position: absolute;
+                inset: 0;
+            }
+            .fmenu {
+                li {
+                    line-height: 1.5;
+                    a{
+                        &:hover {
+
+                        }
+                    }
+                }
+            }
+            p {
+                margin: .5rem 0;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+.footerBottom {
+padding: .5rem 0;
+color: #fff;
+background: $primary-color;
+* {
+    color: #fff;
+}
+.cent {
+    *{
+        font-size: 1.4rem;
+    }
+    a{
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.imedia {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    a {
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+    .m_text {
+      display: flex;
+      flex-direction: column;
+      a {
+        font-family: "gil";
+        font-size: 1.8rem;
+      }
+      .digital_media {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}

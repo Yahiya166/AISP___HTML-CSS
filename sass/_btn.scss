@@ -1,0 +1,49 @@
+.btn {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    margin: 2rem auto;
+    width: fit-content;
+    padding: 1rem 2rem;
+    font-weight: weight(bold);
+    @include ease-in();
+    &.flex_{
+        gap:1rem;
+    }
+    i{
+    @include ease-in();
+    }
+    &:hover {
+        i {
+            margin-left: .5rem;
+        }
+    }
+    &-primary{
+        border-radius: 5rem;
+        margin: 1rem 0;
+        border: .2rem solid #000;
+        &:hover{
+            background: #000;
+            color: #fff;
+            
+        }
+    
+    }
+    &-secondary{
+        font-size: 1.8rem;
+        border-radius: 5rem;
+        background: $primary-color;
+        margin: 1rem 0;
+        color:#fff;
+        &:hover{
+            background: #000;
+            color: #fff;
+            
+        }
+    
+    }
+}
+button.btn-primary{
+    background: $primary-color;
+    color: #fff;
+    margin: 2rem 0 0;
+}
